@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <div class="promotion">100+ NEW MARKDOWNS ADDED! UP TO 50% OFF ALL SALE STYLES! SHOP NOW></div>
+    <div class="nav1">
+        <div class="join">
+            <a href="storeloc">Find a Store</a> |
+            <a href="contact">Contact</a> | 
+            <section><input type="text" placeholder="Email Address"> <button>JOIN</button></section>
+        </div>
+
+        <div class="navimg">
+            <img src="logo@2.6x.png" alt="vineimg">
+        </div>
+        <div class="navship">
+            <a href="SignIn">Welcome, Sign In</a>
+            <a href="Shipto"><strong>Ship To</strong><img src="US.gif" alt="usaflag"></a>
+            <div class="bag">
+                <a href="cart.html" class="cart" style="font-size: 1.5em">
+                    🛒 <span id="cartPage-count"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bigContainer">
+
+       
+        <hr>
+        <div class="promocode">
+            <div><h4>Enter a Promotional Code</h4></div>
+            <div><input type="text" id="promoCode" minlength="5" maxlength="5"> <button onclick="promotion()">Apply</button></div>
+        </div>
+        <div class="cartbody">
+            <div class="carttable">
+                <div class="item">
+                 <h3>ITEM</h3>
+                </div>
+                <div class="Cartprice">
+                    <h3>PRICE</h3>
+                </div>
+                <div class="quantity">
+                    <h3>QUANTITY</h3>
+                </div>
+                <div class="subtotal">
+                    <h3>SUBTOTAL</h3>
+                </div>
+    
+                <div class="itemSummary">
+                    <div class="cartimg">
+                        <img src="images/small/grayfront.jpg" alt="" id="cartImage">
+                    </div>
+
+                    <!-- <div class="itemDet">
+                        <h4>5 <span class="itemName">graySweater</span></h4>
+                        <div class="sizeDets">
+                            <h4>Size: <span>M</span></h4>
+                        </div>
+                    </div> -->
+                    
+                </div>
+
+                <div class="itemPrice">
+                    
+                </div>
+                <div>
+                    <input class="itemQuantity" onchange="updateQuantity()" type="number" min="1" class="qtyField">
+                </div>
+                <div class="itemSubtotal">
+        
+                </div>
+
+                <div class="remove">
+                   <button onclick="remove()">remove</button>
+                </div>
+            </div>
+    
+            <div class="orderSummary">
+                <div class="summaryTitle">
+                    <div class="summarytext">
+                        <h4>Order Summary</h4>
+                        <h5 class="totalItemNumber"> <span id="summaryQty"></span> Items</h5>
+                    </div>
+                   
+                    <hr>
+                </div>
+                <div class="subtotal">
+                    <h4>SUBTOTAL</h4>
+                    <h4>$ <span id="summarySubTotal"></span> </h4>
+                </div>
+                <div class="promotionCode">
+                    <h4>PROMOTION</h4>
+                    <h4><span id="summarySubTotal">50%</span> </h4>
+                </div>
+                <hr>
+                <div class="total">
+                    <h4>TOTAL</h4>
+                    <h4>$ <span id="summaryTotal"></span></h4>
+                </div>
+                <button onclick="location.href='checkout.htm'">Go to Checkout</button>
+            </div>
+    
+        </div>
+
+    </div>
+  
+    <script src="scripts/cartPage.js"></script>
+</body>
+</html>

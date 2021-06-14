@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sliderCart">
+        <div class="nav">
+            <nav class="navBar">
+                <h3>Item added to Cart</h3>
+            </nav>
+            <button class="close" onclick="closeBtn()">X</button>
+            <!-- <i class="fas fa-times">X</i> -->
+        </div>
+        <div class="cart">
+            <div class="imgDes">
+                <div class="imgContainer">
+                    <img src="images/big/grayfront.jpg" alt="prodimage" id="cartImage">
+                </div>
+                <div class="prodDes">
+                    <h3 id="productName"></h3>
+                    <h3 class="productPrice"></h3>
+                    <p>Pier Gray/ <span id="productSize"></span></p>
+                    <h4>Qty: <span id="productQuantity"></span></h4>
+                    <h3 class="price productPrice" ></h3>
+
+                </div>
+            </div>
+
+            <hr>
+            <div class="carttotal">
+                <div class="titleAmount">
+                    <h3 id="subtotal">CART SUBTOTAL</h3>
+                    <span>$<h3 class="totalAmount"></h3></span>
+                </div>
+                <progress id="progressbar" value="95" max="100"> 32% </progress>
+                <p>You qualify for FREE SHIPPING!</p>
+            </div>
+
+            <hr>
+            <button onclick="location.href='cartPage.htm';" class="checkout" >
+                <h4>CHECKOUT</h4>
+            </button>
+            <button class="continueShopping">CONTINUE SHOPPING</button>
+        </div>
+    </div>
+
+    <div class="promotion">100+ NEW MARKDOWNS ADDED! UP TO 50% OFF ALL SALE STYLES! SHOP NOW></div>
+    <div class="nav1">
+        <div class="join">
+            <a href="storeloc">Find a Store</a> |
+            <a href="contact">Contact</a> | 
+            <section><input type="text" placeholder="Email Address"> <button>JOIN</button></section>
+        </div>
+
+        <div class="navimg">
+            <a href="index.htm"><img src="logo@2.6x.png" alt="vineimg"></a>
+        </div>
+        <div class="navship">
+            <a href="SignIn">Welcome, Sign In</a>
+            <a href="Shipto"><strong>Ship To</strong><img src="US.gif" alt="usaflag"></a>
+            <div class="bag">
+                <a href="cart.html" style="font-size: 1.5em">
+                    🛒 <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="containermain">
+        <div class="bodnav">
+            <a href="index.htm">Home ></a>
+            <a href="index.htm">Sale ></a>
+            <a href="index.htm">Kids</a>
+            <a href="index.htm">Boys</a>
+        </div>
+        <div class="container">
+            <div class="prodThumbnail">
+                <img src="images/big/grayfront.jpg" alt="img1" class="thumbnail1" id="subPic1" onclick="changeMain1()">
+                <img src="images/big/grayback.jpg" alt="img2" class="thumbnail2" id="subPic2" onclick="changeMain2()">
+            </div>
+            <div class="mainPic">
+                <img src="images/big/grayfront.jpg" alt="main-pic" id="mainPic">
+            </div>
+            <div class="prodDetails">
+                <h2 id="prdtName">Sankaty Hoodie</h2>
+                <div class="review">&#9733 &#9733 &#9733 &#9733 &#9734 <span id="reviewStats">1200 REVIEWS</span></div>
+                <div class="shipping"><h4>FREE GROUND SHIPPING <span>on orders above $150</span></h4></div>
+                <div class="price"><h4>$ <span id="productPrice">48.93</span> <span class="cancelThrough">$60</span></h4></div>
+                <div class="color"><h4>Color:</h4><div class="colorValue">Caramel</div></div>
+                <div class="colorSelector">
+                    <button id="gray" onclick="gray()"></button>
+                    <button id="white" onclick="white()"></button>
+                    <button id="blue" onclick="blue()"></button>
+                    <button id="coastline" onclick="coastline()"></button>
+                    <button id="red" onclick="red()"></button>
+                </div>
+                <div class="sizeLabel"> <p>Size: <span>L</span> </p>  <div>Size Chart</div> </div>
+                <div class="sizeTypes">
+                <button class="small">S</button>
+                <button class="medium">M</button>
+                <button class="large">L</button>
+                <button class="extraLarge">XL</button>
+                <button class="extraExtraLarge">XXL</button>
+                </div>
+                <p>In stock</p>
+    
+                <div class="qtyAdd">
+                    <button class="subtract" onclick="decrease()">-</button>
+                    <input type="number" value="1" id="item-count" min="1" max="10" class="qtyField">
+                    <button class="add" onclick="increase()">+</button>
+                </div>
+    
+                <button class="addToBag" onclick="addToCart()">ADD TO CART</button>
+                <button class="storePickup">Buy Online, free in-store pickup</button>
+    
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
